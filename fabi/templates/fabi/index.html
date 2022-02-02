@@ -9,7 +9,7 @@
 <body>
     <h1>fabonacci series generator</h1>
     <hr>
-    <form action = "fibo_post_name" method = "get">
+    <form action = "fibo_post" method = "GET">
         <label for="Enter a value">Enter a value :  </label>
         <input id="value" type="text" name="value">
         <br>
@@ -17,6 +17,10 @@
         <hr>
         
     </form>
-    <p>{{ series }}</p>
+    <p>{{ seriess }}</p>
+    <h3>all series</h3>
+    {% for series in all_series %}
+        <p>{{ series.terms }}</p>
+    {% endfor %}
 </body>
 </html>

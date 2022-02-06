@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Fabonacci(models.Model):
-    numstr = models.IntegerField()
+    numstr = models.CharField(max_length=20)
     terms = models.CharField(max_length=500)
 
     def __str__(self):
